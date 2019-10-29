@@ -97,6 +97,7 @@
 		9B5476152368E8BB000E6A86 /* IOS_PickerView_and_Table */ = {
 			isa = PBXGroup;
 			children = (
+				E085B1E72368F6320064EE93 /* images */,
 				9B5476162368E8BB000E6A86 /* AppDelegate.swift */,
 				9B5476182368E8BB000E6A86 /* PickerViewController.swift */,
 				9B54761A2368E8BB000E6A86 /* Main.storyboard */,
@@ -123,6 +124,13 @@
 				9B5476382368E8C8000E6A86 /* Info.plist */,
 			);
 			path = IOS_PickerView_and_TableUITests;
+			sourceTree = "<group>";
+		};
+		E085B1E72368F6320064EE93 /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
