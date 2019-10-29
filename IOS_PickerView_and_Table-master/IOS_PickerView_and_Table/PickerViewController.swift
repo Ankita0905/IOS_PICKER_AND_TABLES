@@ -13,9 +13,12 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     @IBOutlet weak var PickerUI: UIPickerView!
     
    
+    @IBOutlet weak var lblCountry: UILabel!
     
 
     let countries = ["India","Canada","USA","China","Pakistan","Russia","Nepal","France","Mexico"]
+    
+     let currency = ["Rupee","CAD","USD","Yan","Prupee","Euro","Nrupee","euro","Medollar"]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.PickerUI.delegate = self
@@ -24,7 +27,7 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return 2
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -32,11 +35,26 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.countries[row]
+        if component==1
+        {
+            return self.countries[row]
+        }
+        else{
+            return self.currency[row]
+        }
+       // return self.countries[row]
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        if component==1
+        {
+        lblCountry.text=self.countries[row]
         print(self.countries[row])
+        }
+        else
+        {
+            print(self.currency[row])
+        }
     }
 }
 
